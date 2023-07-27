@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="6dp"
+        android:src="@drawable/gazi"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:text="Gazi Üniversitesi"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="116dp"
+        android:text="Öğrenci Tanıtım Uygulaması v1.0.0"
+        android:textColor="#ffffff"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="33dp"
+        android:layout_marginBottom="70dp"
+        android:text="Öğrenci Bilgilerini Giriniz"
+        android:textColor="#ffffff"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/KonumEdt"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/KonumEdt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="61dp"
+        android:layout_marginEnd="61dp"
+        android:backgroundTint="#B5BCED"
+        android:hint="Yaşadığı İl"
+        android:textColor="#ffffff"
+        android:textColorHint="#B5BCED"
+        app:layout_constraintBottom_toTopOf="@+id/YilEdt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintWidth_percent="0.70" />
+
+    <EditText
+        android:id="@+id/AdEdt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="61dp"
+        android:layout_marginEnd="61dp"
+        android:layout_marginBottom="38dp"
+        android:backgroundTint="#B5BCED"
+        android:hint="Ad Soyad"
+        android:textColor="#ffffff"
+        android:textColorHint="#B5BCED"
+        app:layout_constraintBottom_toBottomOf="@+id/KonumEdt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.70" />
+
+    <EditText
+        android:id="@+id/YilEdt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="61dp"
+        android:layout_marginEnd="61dp"
+        android:layout_marginBottom="46dp"
+        android:backgroundTint="#B5BCED"
+        android:hint="Mezuniyet Yılı"
+        android:textColor="#ffffff"
+        android:textColorHint="#B5BCED"
+        app:layout_constraintBottom_toTopOf="@+id/bilgikaydetBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/KonumEdt"
+        app:layout_constraintWidth_percent="0.70" />
+
+
+    <Button
+        android:id="@+id/bilgigosterBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buton"
+        android:onClick="showFunction"
+        android:text="Bilgilerimi Göster"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bilgikaydetBtn"
+        app:layout_constraintTop_toBottomOf="@+id/bilgisilBtn" />
+
+    <Button
+        android:id="@+id/bilgikaydetBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="193dp"
+        android:background="@drawable/buton"
+        android:onClick="saveFunction"
+        android:text="Bilgilerimi Kaydet"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bilgigosterBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/YilEdt" />
+
+    <Button
+        android:id="@+id/bilgisilBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="43dp"
+        android:background="@android:color/transparent"
+        android:onClick="deleteFunction"
+        android:text="Bilgilerimi Sil"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        app:layout_constraintEnd_toEndOf="@+id/YilEdt"
+        app:layout_constraintTop_toTopOf="@+id/YilEdt" />
+
+    <TextView
+        android:id="@+id/adTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="121dp"
+        android:text="Öğrenci Ad Soyadı:"
+        android:textColor="#EFE9E9"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/konumTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:text="Konum:"
+        android:textColor="#EFE9E9"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adTxt" />
+
+    <TextView
+        android:id="@+id/yilTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="39dp"
+        android:text="Mezuniyet Yılı:"
+        android:textColor="#EFE9E9"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
